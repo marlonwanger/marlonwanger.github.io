@@ -1,1 +1,77 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Cord</h3>
+    <span id="geo">Cords Here : </span>
+    <div id="map"></div>
+  </body>
+</html>
+
+<script type="text/javascript">
+  function GeoLocation() {
+    if (navigator.geolocation)
+      navigator.geolocation.getCurrentPosition(showPosition);
+    else console.log("Geo Location not suported");
+  }
+
+  function showPosition(position) {
+    var location = {
+      longitude: position.coords.longitude,
+      latitude: position.coords.latitude,
+    };
+    console.log(location);
+
+    document
+      .getElementById("geo")
+      .append(
+        "Longitude: " +
+          location.longitude +
+          " \n Latitude :" +
+          location.latitude
+      );
+
+      MakeMap(location);
+  }
+
+  GeoLocation();
+
+  function MakeMap(location) {
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoibWFybG9ud2FuZ2VyIiwiYSI6ImNrZzlrczM2dTBzMHcyeG53cmo5aHVxdzAifQ.ZpYLP0oOyJWonF368hFnUw";
+    const map = new mapboxgl.Map({
+      container: "map", // container ID
+      // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+      style: "mapbox://styles/mapbox/streets-v12", // style URL
+      center: [location.longitude, location.latitude], // starting position [lng, lat]
+      zoom: 15, // starting zoom
+    });
+
+    const marker1 = new mapboxgl.Marker()
+            .setLngLat([location.longitude, location.latitude])
+            .addTo(map);
+  }
+
+</script>
