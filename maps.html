@@ -19,6 +19,19 @@
 
     <!-- Custom styles for this template -->
     <link href="navbar-static.css" rel="stylesheet" />
+
+    <link
+    href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css"
+    rel="stylesheet"
+  />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+  <style>
+
+    #map {
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
@@ -53,21 +66,8 @@
       </div>
     </nav>
 
-    <main class="container">
-      <div class="bg-light p-5 rounded">
-        <h1>Navbar example</h1>
-        <p class="lead">
-          This example is a quick exercise to illustrate how the top-aligned
-          navbar works. As you scroll, this navbar remains in its original
-          position and moves with the rest of the page.
-        </p>
-        <a
-          class="btn btn-lg btn-primary"
-          href="/docs/5.3/components/navbar/"
-          role="button"
-          >View navbar docs &raquo;</a
-        >
-      </div>
+    <main class="container-fluid">
+      <div id="map"></div>
     </main>
 
     <script
@@ -75,5 +75,42 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+
+    
+<script type="text/javascript">
+  function GeoLocation() {
+    if (navigator.geolocation)
+      navigator.geolocation.getCurrentPosition(showPosition);
+    else console.log("Geo Location not suported");
+  }
+
+  function showPosition(position) {
+    var location = {
+      longitude: position.coords.longitude,
+      latitude: position.coords.latitude,
+    };
+    console.log(location);
+    MakeMap(location);
+  }
+
+  GeoLocation();
+
+  function MakeMap(location) {
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoibWFybG9ud2FuZ2VyIiwiYSI6ImNrZzlrczM2dTBzMHcyeG53cmo5aHVxdzAifQ.ZpYLP0oOyJWonF368hFnUw";
+    const map = new mapboxgl.Map({
+      container: "map", // container ID
+      // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+      style: "mapbox://styles/mapbox/streets-v12", // style URL
+      center: [location.longitude, location.latitude], // starting position [lng, lat]
+      zoom: 15, // starting zoom
+    });
+
+    const marker1 = new mapboxgl.Marker()
+            .setLngLat([location.longitude, location.latitude])
+            .addTo(map);
+  }
+
+</script>
   </body>
 </html>
