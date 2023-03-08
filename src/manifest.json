@@ -3,7 +3,7 @@
   "description": "Exemplo de pwa",
   "dir": "ltr",
   "display": "standalone",
-  "name": "Gvinci",
+  "name": "Gvinci Starter",
   "orientation": "any",
   "scope": "/src",
   "short_name": "Gvinci",
