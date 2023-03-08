@@ -5,9 +5,9 @@
   "display": "standalone",
   "name": "Gvinci",
   "orientation": "any",
-  "scope": "/dist",
+  "scope": "/src",
   "short_name": "Gvinci",
-  "start_url": "/dist",
+  "start_url": "/src",
   "theme_color": "#9ba6c8",
   "categories": [
     "games"
@@ -466,7 +466,7 @@
   "shortcuts": [
     {
       "name": "Prompt",
-      "url": "/dist/example.html",
+      "url": "/src/prompt.html",
       "description": "Prompt Install"
     }
   ],

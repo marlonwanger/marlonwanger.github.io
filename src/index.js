@@ -7,4 +7,6 @@
 // import './js/badging';
 console.log('aew');
 
-import './js/main';
+import './js/main.js';
+
+// require('./js/main');
