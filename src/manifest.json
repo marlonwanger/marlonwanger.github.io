@@ -8,6 +8,7 @@
   "scope": "/src",
   "short_name": "Gvinci",
   "start_url": "/src",
+  "id": "/src",
   "theme_color": "#9ba6c8",
   "categories": [
     "games"
