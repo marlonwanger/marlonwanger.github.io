@@ -1,7 +1,13 @@
-function GeoLocation() {
-  if (navigator.geolocation)
+function GeoLocation() 
+{
+  if (navigator.geolocation) 
+  {
     navigator.geolocation.getCurrentPosition(showPosition);
-  else console.log("Geo Location not suported");
+  } 
+  else 
+  {
+    console.log("Geo Location not suported");
+  }
 }
 
 function showPosition(position) {
@@ -27,6 +33,6 @@ function MakeMap(location) {
   });
 
   const marker1 = new mapboxgl.Marker()
-          .setLngLat([location.longitude, location.latitude])
-          .addTo(map);
+    .setLngLat([location.longitude, location.latitude])
+    .addTo(map);
 }

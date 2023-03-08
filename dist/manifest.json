@@ -1,0 +1,28 @@
+{
+  "background_color": "#9ba6c8",
+  "description": "Exemplo de pwa",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Gvinci",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Gvinci",
+  "start_url": "/",
+  "theme_color": "#9ba6c8",
+  "categories": [
+    "games"
+  ],
+  "screenshots": [],
+  "icons": [],
+  "shortcuts": [
+    {
+      "name": "Prompt",
+      "url": "https://marlonwanger.github.io/dist/example.html",
+      "description": "Prompt Install"
+    }
+  ],
+  "display_override": [
+    "standalone",
+    "browser"
+  ]
+}
