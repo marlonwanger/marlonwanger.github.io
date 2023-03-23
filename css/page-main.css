@@ -1,0 +1,116 @@
+#installed {
+  display: none;
+}
+
+#install {
+  display: none;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.feature aside header {
+  font-size: 10px;
+  text-align: center;
+}
+
+.feature .btn-flat {
+  padding: 8px 12px 8px 12px;
+  border-radius: 8px;
+  --icon-size: 5em;
+  font-size: large;
+  min-height: 36px;
+  height: 96px;
+  width: 104px;
+}
+
+
+.feature .btn-flat .material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 72px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature .btn-flat i.left {
+  float: left;
+  margin-right: 0px;
+}
+
+@media screen and (min-width: 1024px) {
+
+  .feature, .feature-grid {
+    justify-content: flex-start;
+  }
+
+  .feature {
+    flex-direction: row;
+    flex-basis: 33%;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .feature, .feature-grid {
+      justify-content: flex-start;
+  }
+  
+  .feature a {
+    display: flex;
+  }
+  
+  .feature aside {
+      flex-direction: column;
+  }
+
+  .feature aside header {
+    font-size: 22px;
+    text-align: start;
+  } 
+
+  .feature aside p {
+    display: block;
+    font-size: .8em;
+    line-height: 1.1rem;
+    margin-block-start: 0.5em;
+    max-width: 80%;
+  }
+
+}
+
+

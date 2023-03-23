@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWA</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css"> 
+  <link rel="stylesheet" href="../css/media.css"> 
+</head>
+<body>
+
+  <main>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper blue-grey lighten-3">
+          <div class="row">
+            <div class="col s12">
+              <a href="/"><i class="material-icons">arrow_back</i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <main>
+      <div class="container-off">
+        <div id="app">
+
+          <section id="main-content">
+            <div class="view" data-shell-content>
+              <div class="content">
+                <h1>Media capture - WEBRTC</h1>
+                <p>
+                  Media capture allows apps to use the camera and microphone of a device. After recording a video you can play it, download it or record another one.
+                </p>
+                <p>
+                  Your device supports live streaming and recording of audio and video.
+                </p>
+
+                
+                <div class="display-cover">
+                  <video autoplay></video>
+                  <canvas class="d-none"></canvas>
+              
+                  <div class="video-options">
+                      <select name="" id="" class="custom-select">
+                          <option value="">Select camera</option>
+                      </select>
+                  </div>
+              
+                  <!-- <img class="screenshot-image d-none" alt=""> -->
+              
+                    <div class="video-buttons ">
+                      <button class="waves-effect waves-light btn-flat grey lighten-2 play" id="play" title="Play"><i class="material-icons">videocam</i></button>
+                      <button class="waves-effect waves-light btn-flat grey lighten-2 pause hide" title="Pause"><i class="material-icons">videocam_off</i></button>
+                      <button class="waves-effect waves-light btn-flat grey lighten-2 turnoff hide" id="turnOff" title="Turn Off"><i class="material-icons">power_settings_new</i></button>
+                      <button class="waves-effect waves-light btn-flat grey lighten-2 flip hide" title="Flip"><i class="material-icons">switch_video</i></button>
+                      <button class="waves-effect waves-light btn-flat grey lighten-2 record hide" title="Screenshot"><i class="material-icons">radio_button_checked</i></button>
+                      <button class="waves-effect waves-light btn-flat grey lighten-2 pip hide" title="Picture in Picture"><i class="material-icons">picture_in_picture</i></button>
+                      <button class="waves-effect waves-light btn-flat grey lighten-2 playvideo hide" title="Play video"><i class="material-icons">play_arrow</i></button>
+                      <button class="waves-effect waves-light btn-flat grey lighten-2 downloadvideo hide" title="Download"><i class="material-icons">download</i></button>
+                      <button class="waves-effect waves-light btn-flat grey lighten-2 stoprecord hide" title="Stop Record"><i class="material-icons">radio_button_unchecked</i></button>
+                      <button class="waves-effect waves-light btn-flat grey lighten-2 backtonormal hide" title="Back to Screen"><i class="material-icons">close</i></button>
+                    </div>
+              </div>
+
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+    <div class="footer-fixed">
+      <footer class="red lighten-2">
+        <nav class="z-depth-0">
+          <div class="nav-wrapper blue-grey lighten-3">
+            <ul class="justify">
+              <li><a href="/"><i class="material-icons">home</i></a></li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="../js/register-sw.js"></script>
+  <script src="../js/media-capture.js"></script>
+
+</body>
+</html>

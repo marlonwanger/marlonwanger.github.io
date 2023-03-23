@@ -1,0 +1,64 @@
+.navbar-fixed nav {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+.footer-fixed footer {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin: 10px 0 0;
+  font-weight: bold;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer ul.justify {
+  text-align: center;
+  display: table;
+  overflow: hidden;
+  margin: 0 auto;
+}
+footer ul.justify li {
+  margin-left: auto;
+  margin-right: auto;
+  width: 82px;
+}
+
+#installed {
+  display: none;
+}
+
+#main-content {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex-grow: 1;
+}
+
+.view .content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: auto;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+
